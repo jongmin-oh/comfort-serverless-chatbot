@@ -1,8 +1,8 @@
 import json
 
 from app.models import ComfortBotParams, skillTemplate
-from app.task.generate import Comfort
-from app.task.record import save_record, fatch_records
+from app.tasks.generate import Comfort
+from app.tasks.record import save_record, fatch_records
 
 
 def lambda_handler(event, context):

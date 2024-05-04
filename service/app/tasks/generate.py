@@ -3,7 +3,7 @@ from requests.exceptions import Timeout
 
 from app.models import ComfortBotParams
 from app.config import Config, Paths
-from app.task import Singleton
+from app.tasks import Singleton
 
 data_path = Paths.RESOURCES_DIR.joinpath("persona.txt")
 prompt = open(data_path, "r", encoding="utf-8").read()

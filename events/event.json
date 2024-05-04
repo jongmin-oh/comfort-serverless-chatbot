@@ -1,62 +1,39 @@
 {
-  "body": "{\"message\": \"hello world\"}",
-  "resource": "/hello",
-  "path": "/hello",
-  "httpMethod": "GET",
-  "isBase64Encoded": false,
-  "queryStringParameters": {
-    "foo": "bar"
-  },
-  "pathParameters": {
-    "proxy": "/path/to/resource"
-  },
-  "stageVariables": {
-    "baz": "qux"
-  },
+  "version": "2.0",
+  "routeKey": "POST /kakao",
+  "rawPath": "/kakao",
+  "rawQueryString": "",
   "headers": {
-    "Accept": "text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8",
-    "Accept-Encoding": "gzip, deflate, sdch",
-    "Accept-Language": "en-US,en;q=0.8",
-    "Cache-Control": "max-age=0",
-    "CloudFront-Forwarded-Proto": "https",
-    "CloudFront-Is-Desktop-Viewer": "true",
-    "CloudFront-Is-Mobile-Viewer": "false",
-    "CloudFront-Is-SmartTV-Viewer": "false",
-    "CloudFront-Is-Tablet-Viewer": "false",
-    "CloudFront-Viewer-Country": "US",
-    "Host": "1234567890.execute-api.us-east-1.amazonaws.com",
-    "Upgrade-Insecure-Requests": "1",
-    "User-Agent": "Custom User Agent String",
-    "Via": "1.1 08f323deadbeefa7af34d5feb414ce27.cloudfront.net (CloudFront)",
-    "X-Amz-Cf-Id": "cDehVQoZnx43VYQb9j2-nvCh-9z396Uhbp027Y2JvkCPNLmGJHqlaA==",
-    "X-Forwarded-For": "127.0.0.1, 127.0.0.2",
-    "X-Forwarded-Port": "443",
-    "X-Forwarded-Proto": "https"
+    "accept": "*/*",
+    "content-length": "858",
+    "content-type": "application/json",
+    "host": "comfort.j5ng.com",
+    "user-agent": "AHC/2.1",
+    "x-amzn-trace-id": "Root=1-6635d353-54693d554c5cdb6e0b07abfc",
+    "x-chappie-footprint": "chp-2445e524515c41f8a73fe0bfeb0f6aba",
+    "x-forwarded-for": "219.249.231.41",
+    "x-forwarded-port": "443",
+    "x-forwarded-proto": "https",
+    "x-request-id": "lazenca-977c7aa70355491ba21db8686dd791ce"
   },
   "requestContext": {
-    "accountId": "123456789012",
-    "resourceId": "123456",
-    "stage": "prod",
-    "requestId": "c6af9ac6-7b61-11e6-9a41-93e8deadbeef",
-    "requestTime": "09/Apr/2015:12:34:56 +0000",
-    "requestTimeEpoch": 1428582896000,
-    "identity": {
-      "cognitoIdentityPoolId": null,
-      "accountId": null,
-      "cognitoIdentityId": null,
-      "caller": null,
-      "accessKey": null,
-      "sourceIp": "127.0.0.1",
-      "cognitoAuthenticationType": null,
-      "cognitoAuthenticationProvider": null,
-      "userArn": null,
-      "userAgent": "Custom User Agent String",
-      "user": null
+    "accountId": "077027499029",
+    "apiId": "bjgnimxtma",
+    "domainName": "comfort.j5ng.com",
+    "domainPrefix": "comfort",
+    "http": {
+      "method": "POST",
+      "path": "/kakao",
+      "protocol": "HTTP/1.1",
+      "sourceIp": "219.249.231.41",
+      "userAgent": "AHC/2.1"
     },
-    "path": "/prod/hello",
-    "resourcePath": "/hello",
-    "httpMethod": "POST",
-    "apiId": "1234567890",
-    "protocol": "HTTP/1.1"
-  }
+    "requestId": "XO31Jhb8oE0EP7w=",
+    "routeKey": "POST /kakao",
+    "stage": "$default",
+    "time": "04/May/2024:06:18:59 +0000",
+    "timeEpoch": 1714803539889
+  },
+  "body": "{\"bot\":{\"id\":\"6172a21cd9d9587bfa205df2\",\"name\":\"chatbot_obok\"},\"intent\":{\"id\":\"6172a21cd9d9587bfa205df6\",\"name\":\"폴백 블록\",\"extra\":{\"reason\":{\"code\":1,\"message\":\"OK\"}}},\"action\":{\"id\":\"6177b6778b82806b328e2063\",\"name\":\"챗봇\",\"params\":{},\"detailParams\":{},\"clientExtra\":{}},\"userRequest\":{\"block\":{\"id\":\"6172a21cd9d9587bfa205df6\",\"name\":\"폴백 블록\"},\"user\":{\"id\":\"6d5457b5c36dc0514ac264df1325285befbfe6df12d251bdfdaa1e4e0ff7eb84fb\",\"type\":\"botUserKey\",\"properties\":{\"botUserKey\":\"6d5457b5c36dc0514ac264df1325285befbfe6df12d251bdfdaa1e4e0ff7eb84fb\",\"isFriend\":true,\"plusfriendUserKey\":\"FZmKknzZ6Y6E\",\"bot_user_key\":\"6d5457b5c36dc0514ac264df1325285befbfe6df12d251bdfdaa1e4e0ff7eb84fb\",\"plusfriend_user_key\":\"FZmKknzZ6Y6E\"}},\"utterance\":\"오복아 안녕\",\"params\":{\"surface\":\"Kakaotalk.plusfriend\"},\"lang\":\"ko\",\"timezone\":\"Asia/Seoul\"},\"contexts\":[]}",
+  "isBase64Encoded": false
 }

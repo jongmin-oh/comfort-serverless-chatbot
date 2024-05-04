@@ -23,18 +23,18 @@ Resources:
       Handler: lambda_function.lambda_handler
       Runtime: python3.9
       Architectures:
-      - x86_64
+      - arm64
       Events:
         Chatbot:
-          Type: Api
+          Type: HttpApi
           Properties:
-            Path: /hello
-            Method: get
+            Path: /kakao
+            Method: post
 
 Outputs:
-  ChatbotApi:
+  ChatbotHttpApi:
     Description: API Gateway endpoint URL for Prod stage for Chatbot function
-    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
+    Value: !Sub "https://${ServerlessHttpApi}.execute-api.${AWS::Region}.amazonaws.com/kakao/"
   ChatbotFunction:
     Description: Chatbot Lambda Function ARN
     Value: !GetAtt ChatbotFunction.Arn
