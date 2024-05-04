@@ -20,7 +20,7 @@ Resources:
     Type: AWS::Serverless::Function
     Properties:
       CodeUri: service/
-      Handler: app.lambda_handler
+      Handler: lambda_function.lambda_handler
       Runtime: python3.9
       Architectures:
       - x86_64
