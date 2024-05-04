@@ -1,0 +1,43 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: >
+  comfort-generate-chatbot
+
+  Sample SAM Template for comfort-generate-chatbot
+
+Globals:
+  Function:
+    Timeout: 16
+    MemorySize: 128
+
+    Tracing: Active
+    LoggingConfig:
+      LogFormat: JSON
+  Api:
+    TracingEnabled: true
+Resources:
+  ChatbotFunction:
+    Type: AWS::Serverless::Function
+    Properties:
+      CodeUri: service/
+      Handler: app.lambda_handler
+      Runtime: python3.9
+      Architectures:
+      - x86_64
+      Events:
+        Chatbot:
+          Type: Api
+          Properties:
+            Path: /hello
+            Method: get
+
+Outputs:
+  ChatbotApi:
+    Description: API Gateway endpoint URL for Prod stage for Chatbot function
+    Value: !Sub "https://${ServerlessRestApi}.execute-api.${AWS::Region}.amazonaws.com/Prod/hello/"
+  ChatbotFunction:
+    Description: Chatbot Lambda Function ARN
+    Value: !GetAtt ChatbotFunction.Arn
+  ChatbotFunctionIamRole:
+    Description: Implicit IAM Role created for Chatbot function
+    Value: !GetAtt ChatbotFunctionRole.Arn
