@@ -1,4 +1,5 @@
+# AWS SAM(Serverless Application Model)을 활용한 "카카오톡 위로 챗봇 오복이"
 
-```
-sam local generate-event http post --body '{"key1":"value1", "key2":"value2"}' --headers '{"Content-Type":"application/json"}' --path "/kakao" > event.json
-```
+## Architecture
+![image](https://github.com/jongmin-oh/comfort-serverless-chatbot/assets/23625693/ca1c51e8-fc41-46de-81f8-051d26ae70e9)
+
