@@ -245,3 +245,4 @@ $RECYCLE.BIN/
 service/app/secrets.yml
 .aws-sam/build.toml
 samconfig.toml
+service/app/resources/persona.txt
