@@ -43,3 +43,32 @@ AWS SAM (Serverless Application Model)은 AWS에서 서버리스 애플리케이
 └── template.yaml
 ```
 
+### Deploy Steps
+
+#### 1. Build
+```
+sam build
+```
+build 명령어를 실행하면 ".aws-sam" 파일이 생성됩니다.
+
+#### 2. invoke
+```
+sam local invoke
+```
+빌드가 된 상태에서 invoke 명령어를 사용하면 실제 Lambda 함수에 대한 테스트를 로컬에서 진행할 수 있습니다.<br>
+event.json 파일에 정의된 내용이 Lambda의 event 객체로 전송되어 테스트 됩니다.
+
+#### 3. api-test(선택사항)
+```
+sam local start-api
+```
+API gateway를 사용했을때 가능한 API 테스트 입니다, 실제 도커컨테이너로 http://localhost:3000 으로 웹서버가 실행됩니다. <br>
+GET/POST 요청을 보내 테스트 할 수 있습니다.
+
+#### 4. Deploy
+```
+sam deploy --guided
+```
+실제 AWS에 배포할 수 있습니다.
+
+
