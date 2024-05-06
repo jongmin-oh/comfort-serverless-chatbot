@@ -84,7 +84,6 @@ class Comfort:
             {"role": "user", "content": self.params.utterance}
         )
 
-        print(request_data)
         response = CompletionExecutor().execute(request_data)
 
         response = response["result"]["message"]["content"]
