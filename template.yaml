@@ -30,6 +30,9 @@ Resources:
           Properties:
             Path: /kakao
             Method: post
+    Policies:
+      - AmazonDynamoDBFullAccess
+
 
 Outputs:
   ChatbotHttpApi:
