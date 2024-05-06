@@ -9,9 +9,16 @@
   1. 유지 비용 문제(EC2 서버 비용)
   2. 대화를 이어갈 수 없는 싱글 턴의 한계
 
-위 문제를 해결하기 위해 과감하게 검색 모델을 포기하고, 하이퍼클로바X 모델을 사용한 생성모델로 변경하고,<br>
-온디멘드 인스턴스가 아닌 사용할때만 과금되는 서버리스 아키텍쳐로 새로 구현하였습니다.
+### 해결책
+- 과감하게 검색 모델을 포기하고, 하이퍼클로바X 모델을 사용한 생성모델로 변경하였습니다.
+- 온디멘드 인스턴스가 아닌 사용할때만 과금되는 AWS 서버리스 아키텍쳐로 새로 구현하였습니다.
+- 질문/답변을 AWS DynamoDB에 저장하여 이전대화를 불러와서 생성하는 멀티턴 챗봇으로 새롭게 구현하였습니다.
 
 ## Architecture
 ![image](https://github.com/jongmin-oh/comfort-serverless-chatbot/assets/23625693/ca1c51e8-fc41-46de-81f8-051d26ae70e9)
 
+## What is AWS SAM(Serverless Application Model)
+```
+AWS SAM (Serverless Application Model)은 AWS에서 서버리스 애플리케이션을 빠르고 쉽게 배포하고 관리할 수 있도록 하는 프레임워크입니다.
+이를 통해 AWS Lambda, API Gateway, DynamoDB 등의 서버리스 리소스를 쉽게 정의, 배포 및 관리할 수 있습니다.
+```
