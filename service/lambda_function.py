@@ -6,9 +6,6 @@ from app.tasks.record import save_record, fatch_records
 
 
 def lambda_handler(event, context):
-
-    print(event)
-
     body = event["body"]
     body = json.loads(body)
 
@@ -22,6 +19,4 @@ def lambda_handler(event, context):
     chatbot_response = comfort.generate()
 
     save_record(userId, chatbot_response, "assistant")
-
-    print(fatch_records(userId))
     return skillTemplate.send_response(chatbot_response)
