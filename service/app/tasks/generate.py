@@ -32,17 +32,17 @@ class CompletionExecutor(metaclass=Singleton):
 
                 if response["status"]["code"] != "20000":
                     raise ConnectionError(
-                        "HCX request ERROR " + response["status"]["message"]
+                        "HDASH request ERROR " + response["status"]["message"]
                     )
 
                 return response
 
             except Timeout as e:
                 if i < max_retries - 1:
-                    print(f"HCX Timeout retry {i + 1}")
+                    print(f"HDASH Timeout retry {i + 1}")
                     continue
                 else:
-                    raise ConnectionError(f"HCX-003 {str(e.__repr__())}")
+                    raise ConnectionError(f"HDASH {str(e.__repr__())}")
 
 
 class Comfort:
