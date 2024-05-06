@@ -30,7 +30,7 @@ Resources:
           Properties:
             Path: /kakao
             Method: post
-    Policies:
+      Policies:
       - AmazonDynamoDBFullAccess
 
 
