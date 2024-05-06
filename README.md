@@ -53,7 +53,7 @@ build 명령어를 실행하면 ".aws-sam" 파일이 생성됩니다.
 
 #### 2. invoke
 ```
-sam local invoke
+sam local invoke --event events/event.json
 ```
 빌드가 된 상태에서 invoke 명령어를 사용하면 실제 Lambda 함수에 대한 테스트를 로컬에서 진행할 수 있습니다.<br>
 event.json 파일에 정의된 내용이 Lambda의 event 객체로 전송되어 테스트 됩니다.
