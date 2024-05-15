@@ -11,9 +11,9 @@ def lambda_handler(event, context):
 
     userId = body["userRequest"]["user"]["id"]
     utterance = body["userRequest"]["utterance"]
-    save_record(userId, utterance, "user")
     records = fatch_records(userId)
-
+    print(records)
+    save_record(userId, utterance, "user")
     params = ComfortBotParams(userId=userId, records=records, utterance=utterance)
     comfort = Comfort(params)
     chatbot_response = comfort.generate()
