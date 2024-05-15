@@ -13,7 +13,7 @@
 - 질문/답변을 AWS DynamoDB에 저장하여 이전대화를 불러와서 생성하는 멀티턴 챗봇으로 새롭게 구현하였습니다.
 
 ## Architecture
-![image](https://github.com/jongmin-oh/comfort-serverless-chatbot/assets/23625693/ca1c51e8-fc41-46de-81f8-051d26ae70e9)
+![image](https://github.com/jongmin-oh/comfort-serverless-chatbot/assets/23625693/98c286ed-29aa-4c7e-a7c0-ac4fe1465fde)
 
 ### What is SAM?
 ```
